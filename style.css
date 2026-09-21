@@ -1,0 +1,13 @@
+/* Kalender Styling */
+.calendar-container {
+  background-color: #1e1e1e;
+  border: 1px solid #2d2d2d;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.calendar-container iframe {
+  filter: invert(0.9) hue-rotate(180deg); /* Sorgt für einen dunkleren Look des Kalenders */
+  border-radius: 8px;
+}
