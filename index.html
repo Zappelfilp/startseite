@@ -12,10 +12,18 @@
     <!-- Google Logo / Titel -->
     <h1 class="logo">Google</h1>
 
-    <!-- Google Suche -->
-    <form class="search-form" action="https://www.google.com/search" method="GET">
-      <input type="text" name="q" placeholder="Auf Google suchen oder URL eingeben..." autofocus required>
-    </form>
+    <!-- Beides Suchfelder nebeneinander -->
+    <div style="display: flex; gap: 15px; max-width: 800px; margin: 0 auto 35px auto;">
+      
+      <!-- Google Suche -->
+      <form action="https://www.google.com/search" method="GET" style="flex: 1;">
+        <input type="text" name="q" placeholder="Auf Google suchen..." autofocus required style="width: 100%; padding: 12px 18px; font-size: 15px; border-radius: 20px; border: 1px solid #333333; background-color: #1e1e1e; color: #ffffff; box-sizing: border-box;">
+      </form>
+
+      <!-- Gemini Suche -->
+      <form action="https://gemini.google.com/app" method="GET" style="flex: 1;">
+        <input type="text" name="q" placeholder="Gemini fragen..." required style="width: 100%; padding: 12px 18px; font-size: 15px; border-radius: 20px; border: 1px solid #333333; background-color: #1e1e1e; color: #ffffff; box-sizing: border-box;">
+      </form>
     <!-- 3-Spalten Layout -->
     <div class="columns-wrapper">
 
