@@ -9,14 +9,20 @@
 </head>
 <body>
 
-  <div class="container">
-    <!-- Google Logo / Titel -->
-    <h1 class="logo">Google</h1>
+<!-- Container für beide Suchleisten nebeneinander -->
+    <div class="search-container">
+      
+      <!-- Google Suche -->
+      <form class="search-form" action="https://www.google.com/search" method="GET" target="_blank">
+        <input type="text" name="q" placeholder="Auf Google suchen..." autofocus required>
+      </form>
 
-    <!-- Google Suche -->
-    <form class="search-form" action="https://www.google.com/search" method="GET">
-      <input type="text" name="q" placeholder="Auf Google suchen oder URL eingeben..." autofocus required>
-    </form>
+      <!-- Gemini Suche -->
+      <form class="search-form gemini-form" action="https://gemini.google.com/app" method="GET" target="_blank">
+        <input type="text" name="q" placeholder="Gemini fragen..." required>
+      </form>
+
+    </div>
 
     <!-- 3-Spalten Layout -->
     <div class="columns-wrapper">
