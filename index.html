@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meine Startseite</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 
@@ -17,64 +17,69 @@
       <input type="text" name="q" placeholder="Auf Google suchen oder URL eingeben..." autofocus required>
     </form>
 
-    <!-- Schnellzugriffe / Web-Links -->
-    <section class="section">
-      <h2>Web Links</h2>
-      <div class="grid">
-        <a href="https://youtube.com" class="card" target="_blank">
-          <img src="https://www.google.com/s2/favicons?domain=youtube.com&sz=64" alt="YouTube">
-          <span>YouTube</span>
-        </a>
-        <a href="https://gmail.com" class="card" target="_blank">
-          <img src="https://www.google.com/s2/favicons?domain=gmail.com&sz=64" alt="Gmail">
-          <span>Gmail</span>
-        </a>
-        <a href="https://reddit.com" class="card" target="_blank">
-          <img src="https://www.google.com/s2/favicons?domain=reddit.com&sz=64" alt="Reddit">
-          <span>Reddit</span>
-        </a>
-        <a href="https://github.com" class="card" target="_blank">
-          <img src="https://www.google.com/s2/favicons?domain=github.com&sz=64" alt="GitHub">
-          <span>GitHub</span>
-        </a>
-      </div>
-    </section>
+    <!-- 3-Spalten Layout -->
+    <div class="columns-wrapper">
 
-    <!-- Heimnetz-Geräte (IP-Adressen) -->
-    <section class="section">
-      <h2>Heimnetz & Smart Home</h2>
-      <div class="grid">
-        <a href="http://192.168.0.1" class="card" target="_blank">
-          <img src="https://www.google.com/s2/favicons?domain=avm.de&sz=64" alt="FritzBox">
-          <span>FritzBox</span>
-        </a>
-        <a href="http://192.168.178.50:8080" class="card" target="_blank">
-          <img src="https://www.google.com/s2/favicons?domain=synology.com&sz=64" alt="NAS Server">
-          <span>NAS Server</span>
-        </a>
-        <a href="http://192.168.0.114:8123" class="card" target="_blank">
-          <img src="https://www.google.com/s2/favicons?domain=home-assistant.io&sz=64" alt="Home Assistant">
-          <span>Home Assistant</span>
-        </a>
-        <a href="http://192.168.178.100" class="card" target="_blank">
-          <img src="https://www.google.com/s2/favicons?domain=pi-hole.net&sz=64" alt="Pi-hole">
-          <span>Pi-hole</span>
-        </a>
-      </div>
-    </section>
+      <!-- Spalte 1: Web-Links -->
+      <section class="column">
+        <h2>Web Links</h2>
+        <div class="grid">
+          <a href="https://youtube.com" class="card" target="_blank">
+            <img src="https://www.google.com/s2/favicons?domain=youtube.com&sz=64" alt="YouTube">
+            <span>YouTube</span>
+          </a>
+          <a href="https://gmail.com" class="card" target="_blank">
+            <img src="https://www.google.com/s2/favicons?domain=gmail.com&sz=64" alt="Gmail">
+            <span>Gmail</span>
+          </a>
+          <a href="https://reddit.com" class="card" target="_blank">
+            <img src="https://www.google.com/s2/favicons?domain=reddit.com&sz=64" alt="Reddit">
+            <span>Reddit</span>
+          </a>
+          <a href="https://github.com" class="card" target="_blank">
+            <img src="https://www.google.com/s2/favicons?domain=github.com&sz=64" alt="GitHub">
+            <span>GitHub</span>
+          </a>
+        </div>
+      </section>
 
-    <!-- Google Kalender (Monatsansicht) -->
-    <section class="section">
-      <h2>Monatskalender</h2>
-      <div class="calendar-container">
-        <iframe 
-          src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FBerlin&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=1&showCalendars=0&showTz=0&mode=MONTH&src=abagnaler%40gmail.com" 
-          style="border:0; width:100%; height:600px;" 
-          frameborder="0" 
-          scrolling="no">
-        </iframe>
-      </div>
-    </section>
+      <!-- Spalte 2: Heimnetz (IP-Adressen) -->
+      <section class="column">
+        <h2>Heimnetz & Smart Home</h2>
+        <div class="grid">
+          <a href="http://192.168.178.1" class="card" target="_blank">
+            <img src="https://www.google.com/s2/favicons?domain=avm.de&sz=64" alt="FritzBox">
+            <span>FritzBox</span>
+          </a>
+          <a href="http://192.168.178.50:8080" class="card" target="_blank">
+            <img src="https://www.google.com/s2/favicons?domain=synology.com&sz=64" alt="NAS Server">
+            <span>NAS Server</span>
+          </a>
+          <a href="http://192.168.178.8123" class="card" target="_blank">
+            <img src="https://www.google.com/s2/favicons?domain=home-assistant.io&sz=64" alt="Home Assistant">
+            <span>Home Assistant</span>
+          </a>
+          <a href="http://192.168.178.100" class="card" target="_blank">
+            <img src="https://www.google.com/s2/favicons?domain=pi-hole.net&sz=64" alt="Pi-hole">
+            <span>Pi-hole</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Spalte 3: Google Monatskalender -->
+      <section class="column">
+        <h2>Monatskalender</h2>
+        <div class="calendar-container">
+          <iframe 
+            src="https://calendar.google.com/calendar/embed?height=500&wkst=2&ctz=Europe%2FBerlin&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=1&showCalendars=0&showTz=0&mode=MONTH&src=abagnaler%40gmail.com" 
+            style="border:0; width:100%; height:500px;" 
+            frameborder="0" 
+            scrolling="no">
+          </iframe>
+        </div>
+      </section>
+
+    </div>
   </div>
 
 </body>
