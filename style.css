@@ -11,3 +11,40 @@
   filter: invert(0.9) hue-rotate(180deg); /* Sorgt für einen dunkleren Look des Kalenders */
   border-radius: 8px;
 }
+/* Kacheln (Cards) - Text unter dem Logo */
+.card {
+  background-color: #1e1e1e;
+  border: 1px solid #2d2d2d;
+  border-radius: 12px;
+  padding: 14px 10px;
+  display: flex;
+  flex-direction: column; /* Stellt Bild und Text untereinander */
+  align-items: center;    /* Zentriert Logo und Text horizontal */
+  justify-content: center;
+  gap: 8px;               /* Abstand zwischen Logo und Text */
+  color: #e8eaed;
+  text-decoration: none;
+  transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.card:hover {
+  background-color: #2a2a2a;
+  border-color: #444444;
+  transform: translateY(-2px);
+}
+
+/* Große Icons */
+.card img {
+  width: 32px;            /* Etwas größeres Icon */
+  height: 32px;
+  border-radius: 6px;
+  object-fit: contain;
+}
+
+/* Kleiner Linktext unter dem Logo */
+.card span {
+  font-size: 12px;        /* Schriftgröße kleiner gemacht */
+  font-weight: 400;       /* Schriftdicke etwas schlanker */
+  color: #9aa0a6;         /* Dezenteres Grau */
+  text-align: center;
+}
