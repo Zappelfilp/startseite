@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meine Startseite</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Google Logo / Titel -->
+    <h1 class="logo">Google</h1>
+
+    <!-- Google Suche -->
+    <form class="search-form" action="https://www.google.com/search" method="GET">
+      <input type="text" name="q" placeholder="Auf Google suchen oder URL eingeben..." autofocus required>
+    </form>
+
+    <!-- Schnellzugriffe / Web-Links -->
+    <section class="section">
+      <h2>Web Links</h2>
+      <div class="grid">
+        <a href="https://youtube.com" class="card" target="_blank">
+          <img src="https://www.google.com/s2/favicons?domain=youtube.com&sz=64" alt="YouTube">
+          <span>YouTube</span>
+        </a>
+        <a href="https://gmail.com" class="card" target="_blank">
+          <img src="https://www.google.com/s2/favicons?domain=gmail.com&sz=64" alt="Gmail">
+          <span>Gmail</span>
+        </a>
+        <a href="https://reddit.com" class="card" target="_blank">
+          <img src="https://www.google.com/s2/favicons?domain=reddit.com&sz=64" alt="Reddit">
+          <span>Reddit</span>
+        </a>
+        <a href="https://github.com" class="card" target="_blank">
+          <img src="https://www.google.com/s2/favicons?domain=github.com&sz=64" alt="GitHub">
+          <span>GitHub</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Heimnetz-Geräte (IP-Adressen) -->
+    <section class="section">
+      <h2>Heimnetz & Smart Home</h2>
+      <div class="grid">
+        <a href="http://192.168.178.1" class="card" target="_blank">
+          <img src="https://www.google.com/s2/favicons?domain=avm.de&sz=64" alt="FritzBox">
+          <span>FritzBox</span>
+        </a>
+        <a href="http://192.168.178.50:8080" class="card" target="_blank">
+          <img src="https://www.google.com/s2/favicons?domain=synology.com&sz=64" alt="NAS Server">
+          <span>NAS Server</span>
+        </a>
+        <a href="http://192.168.178.8123" class="card" target="_blank">
+          <img src="https://www.google.com/s2/favicons?domain=home-assistant.io&sz=64" alt="Home Assistant">
+          <span>Home Assistant</span>
+        </a>
+        <a href="http://192.168.178.100" class="card" target="_blank">
+          <img src="https://www.google.com/s2/favicons?domain=pi-hole.net&sz=64" alt="Pi-hole">
+          <span>Pi-hole</span>
+        </a>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>
