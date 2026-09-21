@@ -1,27 +1,105 @@
-/* Kalender Styling */
-.calendar-container {
-  background-color: #1e1e1e;
-  border: 1px solid #2d2d2d;
-  border-radius: 12px;
-  overflow: hidden;
-  padding: 10px;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.calendar-container iframe {
-  filter: invert(0.9) hue-rotate(180deg); /* Sorgt für einen dunkleren Look des Kalenders */
-  border-radius: 8px;
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
 }
-/* Kacheln (Cards) - Text unter dem Logo */
+
+/* Haupt-Container breiter machen für 3 Spalten */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  font-size: 52px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 24px;
+  letter-spacing: -1px;
+}
+
+.search-form {
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 40px;
+}
+
+.search-form input[type="text"] {
+  width: 100%;
+  padding: 16px 24px;
+  font-size: 18px;
+  border-radius: 30px;
+  border: 1px solid #333333;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  outline: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease-in-out;
+}
+
+.search-form input[type="text"]:focus {
+  border-color: #8ab4f8;
+  background-color: #252525;
+  box-shadow: 0 4px 18px rgba(138, 180, 248, 0.2);
+}
+
+/* 3-Spalten Grid */
+.columns-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.8fr; /* Spalte 1 & 2 schmaler, Spalte 3 (Kalender) etwas breiter */
+  gap: 24px;
+  width: 100%;
+  align-items: start;
+}
+
+/* Responsive: Auf kleinen Bildschirmen/Tablets untereinander stapeln */
+@media (max-width: 900px) {
+  .columns-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+.column h2 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #9aa0a6;
+  margin-bottom: 14px;
+  padding-left: 4px;
+}
+
+/* Grid innerhalb von Spalte 1 & 2 für die Kacheln */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 Kacheln nebeneinander in jeder Link-Spalte */
+  gap: 12px;
+}
+
+/* Kacheln (Cards) - Vertikal ausgerichtet mit Text unter dem Logo */
 .card {
   background-color: #1e1e1e;
   border: 1px solid #2d2d2d;
   border-radius: 12px;
-  padding: 14px 10px;
+  padding: 16px 10px;
   display: flex;
-  flex-direction: column; /* Stellt Bild und Text untereinander */
-  align-items: center;    /* Zentriert Logo und Text horizontal */
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  gap: 8px;               /* Abstand zwischen Logo und Text */
+  gap: 8px;
   color: #e8eaed;
   text-decoration: none;
   transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
@@ -33,18 +111,30 @@
   transform: translateY(-2px);
 }
 
-/* Große Icons */
 .card img {
-  width: 32px;            /* Etwas größeres Icon */
+  width: 32px;
   height: 32px;
   border-radius: 6px;
   object-fit: contain;
 }
 
-/* Kleiner Linktext unter dem Logo */
 .card span {
-  font-size: 12px;        /* Schriftgröße kleiner gemacht */
-  font-weight: 400;       /* Schriftdicke etwas schlanker */
-  color: #9aa0a6;         /* Dezenteres Grau */
+  font-size: 12px;
+  font-weight: 400;
+  color: #9aa0a6;
   text-align: center;
+}
+
+/* Kalender Styling */
+.calendar-container {
+  background-color: #1e1e1e;
+  border: 1px solid #2d2d2d;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 8px;
+}
+
+.calendar-container iframe {
+  filter: invert(0.9) hue-rotate(180deg);
+  border-radius: 8px;
 }
